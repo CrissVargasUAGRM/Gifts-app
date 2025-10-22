@@ -64,13 +64,9 @@ export interface FixedHeight {
     hash?:     string;
 }
 
-export enum Rating {
-    G = "g",
-}
+export type Rating = 'G' | 'PG';
 
-export enum Type {
-    GIF = "gif",
-}
+export type Type = "gif";
 
 export interface User {
     avatar_url:    string;
@@ -95,17 +91,4 @@ export interface Pagination {
     total_count: number;
     count:       number;
     offset:      number;
-}
-
-  ],
-  "meta": {
-    "status": 200,
-    "msg": "OK",
-    "response_id": "ecduc8t6l9fszmt74fxyyagm5d3mesmp6pyqmefk"
-  },
-  "pagination": {
-    "total_count": 500,
-    "count": 25,
-    "offset": 0
-  }
 }
