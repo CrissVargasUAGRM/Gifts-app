@@ -10,11 +10,15 @@ export const useGifs = () => {
 
     const gifsCache = useRef<Record<string, Gif[]>>({});
 
-    const onClickTerm = (term: string) => {
+    const onClickTerm = async(term: string) => {
         if(gifsCache.current[term]){
             setGifs(gifsCache.current[term]);
             return;
         }
+
+        const gifs = await getGifByQuery(term);
+        setGifs(gifs);
+        gifsCache.current[term] = gifs;
     };
 
     const handleSearch = async(query: string) => {

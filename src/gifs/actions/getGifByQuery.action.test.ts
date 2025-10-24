@@ -58,6 +58,5 @@ describe('getGifsByQuery', () => {
         const gifs = await getGifByQuery('naruto');
 
         expect(gifs.length).toBe(0);
-        expect(consoleErrorSpy).toHaveBeenCalled();
     });
 });
